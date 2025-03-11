@@ -1,5 +1,5 @@
-
 # Restaurant Website Project
+
 This project involves designing a fully functional restaurant webpage with a focus on user experience and visual appeal.
 It includes sections like Home, About Us, Menu, Reservations, Team Info, Testimonials, and Contact Us.
 
@@ -12,7 +12,6 @@ This project has been bootstrapped with:
 - React Router
 - Tailwind
 - MUI
-- Husky
 - Stylelint
 - Babel
 - ESLint
@@ -29,7 +28,6 @@ Fork the project and run `npm install`.
 
 ```
 ├── dist                        # output from compilation
-├── husky                       # pre-commit checks
 ├── config                      # public files
 ├── public                      # public files
 ├── src                         # application code
@@ -66,17 +64,6 @@ The project runs on port `3000` by default, but this can be changed in `./vite.c
 ### Building
 
 To build the project in `prodction` mode `npm run build`.
-
-### Commit with Husky
-
-Husky is used to enforce pre-commit hooks to ensure code quality before commits. Follow these steps to commit:
-
-- Make your changes to the codebase.
-- Stage the changes with git add ..
-- Run git commit -m "Your commit message".
-- Husky will trigger and run lint-staged to check for formatting issues and linting errors.
-- If all checks pass, the commit will be completed.
-- If any checks fail, Husky will prevent the commit and show you the issues to fix.
 
 ### IDE Configuration
 
