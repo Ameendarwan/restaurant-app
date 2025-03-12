@@ -61,18 +61,14 @@ export const theme = createTheme({
     divider: '#e0e0e0',
   },
   typography: {
-    htmlFontSize: 10,
-    fontSize: 16,
     allVariants: {
-      fontFamily:
-        'soleil, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+      fontFamily: 'Poppins, serif',
     },
     button: {
       textTransform: 'none',
       letterSpacing: 0,
       boxShadow: 'none',
-      fontFamily:
-        'soleil, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+      fontFamily: 'Poppins, serif',
     },
     h1: {
       fontSize: '6.4rem',

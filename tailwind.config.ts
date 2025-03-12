@@ -18,7 +18,7 @@ module.exports = {
         mochiy: ['Mochiy Pop One', 'sans-serif'],
       },
       boxShadow: {
-        custom: '0px 0px 30px 5px rgba(0, 0, 0, 0.10)',
+        custom: '0px 0px 45px rgba(0, 0, 0, 0.08)',
       },
       flexGrow: {
         2: '2',
@@ -27,6 +27,7 @@ module.exports = {
         border: '#CCCCCC',
         separator: '#EDEDED',
         input: 'hsl(var(--input))',
+        text: '#0F172B',
         ring: 'hsl(var(--ring))',
         background: '#FFFFFF',
         foreground: 'hsl(var(--foreground))',
@@ -35,7 +36,7 @@ module.exports = {
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
-          DEFAULT: '#E1E6EB',
+          DEFAULT: '#666565',
           foreground: 'hsl(var(--secondary-foreground))',
         },
         destructive: {
@@ -128,16 +129,6 @@ module.exports = {
       },
     },
   },
-  safelist: [
-    {
-      pattern: /border-validations-(edge|upstream|equipment|span)/,
-    },
-    {
-      pattern: /fill-validations-(edge|upstream|equipment|span)/,
-    },
-    {
-      pattern: /bg-validations-(edge|upstream|equipment|span)/,
-    },
-  ],
+
   plugins: [require('tailwindcss-animate')],
 };

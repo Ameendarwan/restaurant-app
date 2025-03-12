@@ -116,8 +116,7 @@
 
   /* Global scroll styles */
   *::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    scrollbar-width: none;
   }
 
   *::-webkit-scrollbar-track {
