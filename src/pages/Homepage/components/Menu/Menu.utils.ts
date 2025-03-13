@@ -28,6 +28,12 @@ export const menuData: Record<string, MenuItem[]> = {
       description: 'Golden brown French toast topped with powdered sugar and berries.',
       image: menuImage3,
     },
+    {
+      title: 'Chicken Sandwich',
+      price: '$12',
+      description: 'Grilled chicken sandwich with lettuce, tomato, and mayo.',
+      image: menuImage3,
+    },
   ],
   lunch: [
     {
@@ -48,6 +54,12 @@ export const menuData: Record<string, MenuItem[]> = {
       description: 'Crispy grilled cheese sandwich with melted cheddar.',
       image: menuImage5,
     },
+    {
+      title: 'French Toast',
+      price: '$9',
+      description: 'Golden brown French toast topped with powdered sugar and berries.',
+      image: menuImage3,
+    },
   ],
   dinner: [
     {
@@ -67,6 +79,12 @@ export const menuData: Record<string, MenuItem[]> = {
       price: '$15',
       description: 'Creamy Alfredo pasta with mushrooms and parmesan.',
       image: menuImage8,
+    },
+    {
+      title: 'Caesar Salad',
+      price: '$11',
+      description: 'Fresh romaine lettuce with parmesan cheese and Caesar dressing.',
+      image: menuImage4,
     },
   ],
 };

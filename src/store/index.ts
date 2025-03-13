@@ -1,14 +1,11 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { rulesReducer } from '@app/store/slices/rules';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 /**
  * Combine all reducers into a single root reducer, extend as needed
  */
-export const rootReducer = combineReducers({
-  rules: rulesReducer,
-});
+export const rootReducer = combineReducers({});
 
 /**
  * Add any custom middleware here. Remove the `any` type and add your own middleware types.

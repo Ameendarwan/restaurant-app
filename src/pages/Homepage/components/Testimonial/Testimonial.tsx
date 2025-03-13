@@ -14,7 +14,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <div className="bg-lightBackground w-full text-center md:px-48 md:pb-14 md:pt-28">
+    <div className="w-full bg-lightBackground pb-8 text-center md:px-48 md:pb-14 md:pt-28">
       <SectionHeader title="Testimonial" />
       <span className={twMerge('!text-[40px] !font-bold text-text')}>Our Clients Say!!!</span>
       <div className="flex w-full flex-row flex-wrap justify-center gap-6 pt-10">

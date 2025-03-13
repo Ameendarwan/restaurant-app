@@ -22,7 +22,7 @@ const Reservation = () => {
   };
 
   return (
-    <section className="flex h-full w-full flex-col items-center md:flex-row">
+    <section className="flex h-full w-full flex-col items-center md:flex-row" id="reservation">
       <img src={reservationImage} alt="Reservation" className="object-cover lg:w-1/2" />
       <div className="flex h-full w-full items-center justify-start bg-text p-6 text-white md:px-8 lg:w-1/2">
         <div className="h-full w-full md:max-w-[80%]">

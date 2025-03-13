@@ -20,6 +20,18 @@ This project has been bootstrapped with:
 - assuming `master` branch represents production environment
 - assuming app is built into `dist` folder
 
+## Supported Node.js Version
+
+This project requires **Node.js v20.17.0**.
+Please ensure you have the correct version installed before running the project.
+
+You can use [nvm](https://github.com/nvm-sh/nvm) to manage Node.js versions:
+
+```sh
+nvm install 20.17.0
+nvm use 20.17.0
+```
+
 ## Getting Started
 
 Fork the project and run `npm install`.
@@ -27,31 +39,32 @@ Fork the project and run `npm install`.
 ### Project Layout
 
 ```
-├── dist                        # output from compilation
-├── config                      # public files
-├── public                      # public files
-├── src                         # application code
-│   ├── index.html              # html file
-│   ├── assets                  # static files
-│   ├── components              # component files
-│   └── pages                   # page files
-│   └── hooks                   # general purpose hooks
-│   └── mock                    # mock apis and data
-│   └── store                   # application state management
-│   └── routes                  # routes and urls
-│   └── lib                     # utility functions and reusable modules
-│   └── utils                   # general reusabale code
-│   └── App.tsx                 # includes routes, providers, etc.
-│   └── main.tsx                # vite entry point
-└── tests                       # tests utility and setup
-└── .babelrc                    # compiler config
-└── .eslintrc.json              # code quality config
-└── .prettierrc                 # logic formatting config
-└── .stylelint                  # style formatting config
-└── jest.config.ts              # testing config
-└── tsconfig.json               # typescript config file
-└── vite.config.ts              # vite configuration
-└── vitest.config.ts            # vitest configuration
+
+├── dist # output from compilation
+├── config # public files
+├── public # public files
+├── src # application code
+│ ├── index.html # html file
+│ ├── assets # static files
+│ ├── components # component files
+│ └── pages # page files
+│ └── hooks # general purpose hooks
+│ └── mock # mock apis and data
+│ └── store # application state management
+│ └── routes # routes and urls
+│ └── lib # utility functions and reusable modules
+│ └── utils # general reusabale code
+│ └── App.tsx # includes routes, providers, etc.
+│ └── main.tsx # vite entry point
+└── tests # tests utility and setup
+└── .babelrc # compiler config
+└── .eslintrc.json # code quality config
+└── .prettierrc # logic formatting config
+└── .stylelint # style formatting config
+└── jest.config.ts # testing config
+└── tsconfig.json # typescript config file
+└── vite.config.ts # vite configuration
+└── vitest.config.ts # vitest configuration
 
 ```
 
@@ -74,3 +87,7 @@ Install these extension for code-completion and linting in the IDE:
 - **ESLint** (by Microsoft) to enforce **Code Quality Rules**
 - **Prettier** (by Prettier) to enforce **JS/TS Formatting Rules**
 - **Tailwind CSS IntelliSense** (by Tailwind) for **CSS tooling**
+
+```
+
+```

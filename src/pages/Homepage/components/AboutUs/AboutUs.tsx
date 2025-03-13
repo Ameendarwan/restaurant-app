@@ -6,7 +6,7 @@ import aboutImage4 from '@app/assets/about/about-4.png';
 
 const AboutUs = () => {
   return (
-    <section className="bg-lightBackground flex w-full flex-col items-center gap-6 p-8 md:px-48 md:py-28 lg:flex-row">
+    <section className="flex w-full flex-col items-center gap-6 px-6 pb-16 md:bg-lightBackground md:px-48 md:py-28 lg:flex-row">
       {/* Image Grid */}
       <div className="grid w-full grid-cols-2 justify-center gap-4 lg:w-1/2">
         <img src={aboutImage1} alt="Restaurant Interior" className="w-full rounded-lg" />

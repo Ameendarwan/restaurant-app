@@ -10,6 +10,14 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToReservation = () => {
+    document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToMenu = () => {
+    document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="relative min-h-16">
       {/* Desktop Navbar */}
@@ -21,7 +29,7 @@ const Navbar = () => {
         <div className="flex flex-row items-center gap-10">
           <div className="flex flex-row items-center gap-10">
             <span
-              onClick={() => navigate(paths.homepage)}
+              onClick={scrollToMenu}
               className={`cursor-pointer uppercase hover:text-primary ${pathname === paths.homepage ? 'text-primary' : 'text-white'}`}>
               Home
             </span>
@@ -31,13 +39,15 @@ const Navbar = () => {
               Contact
             </span>
           </div>
-          <Button variant="contained">Book A Table</Button>
+          <Button variant="contained" onClick={scrollToReservation}>
+            Book A Table
+          </Button>
         </div>
       </div>
 
       {/* Mobile Navbar */}
       <div className="absolute left-0 right-0 flex w-full flex-col">
-        <div className="flex w-full items-center justify-between bg-text p-4 md:hidden">
+        <div className="flex w-full items-center justify-between bg-text px-4 py-2 md:hidden">
           <div className="flex items-center gap-1">
             <img src={logo} alt="logo" className="h-12 w-12" />
             <span className="font-mochiy text-2xl text-primary">FoodFront</span>
@@ -66,7 +76,7 @@ const Navbar = () => {
               className={`cursor-pointer hover:text-primary ${pathname === paths.contactUs ? 'text-primary' : 'text-white'}`}>
               Contact
             </span>
-            <Button variant="contained" className="max-w-max" onClick={() => setIsMenuOpen(false)}>
+            <Button variant="contained" className="max-w-max" onClick={scrollToReservation}>
               Book A Table
             </Button>
           </div>

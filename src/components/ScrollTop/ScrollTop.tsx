@@ -7,7 +7,7 @@ const ScrollTop = () => {
   return (
     <div className="flex w-full flex-row justify-end">
       <div
-        className="flex cursor-pointer items-center justify-center rounded-sm bg-primary p-4"
+        className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-sm bg-primary"
         onClick={handleScrollToTop}>
         <i className="fa-solid fa-arrow-up text-white"></i>
       </div>
