@@ -1,17 +1,26 @@
-import { Button, Divider } from '@mui/material';
-
+import { Divider } from '@mui/material';
 import React from 'react';
+import { paths } from '@app/routes/Routes.utils';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative flex w-full flex-col items-center justify-between gap-3 bg-[#272F41] px-2 pb-4 pt-6 md:flex-row md:px-48 md:py-3.5">
       <div className="flex flex-row items-center text-[15px] text-white">
         © <span className="pl-1 underline decoration-1 underline-offset-4"> Your Site Name</span>, All Right Reserved.
       </div>
       <div className="flex flex-row items-center">
-        <Button variant="text">Home</Button>
-        <Divider className="md:hidden" orientation="vertical" />
-        <Button variant="text">Contact</Button>
+        <div className="flex flex-row items-center gap-10">
+          <span onClick={() => navigate(paths.homepage)} className={`cursor-pointer text-white hover:text-primary`}>
+            Home
+          </span>
+          <Divider className="md:hidden" orientation="vertical" />
+          <span onClick={() => navigate(paths.contactUs)} className={`cursor-pointer text-white hover:text-primary`}>
+            Contact
+          </span>
+        </div>
       </div>
     </div>
   );

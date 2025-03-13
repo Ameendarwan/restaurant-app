@@ -19,9 +19,8 @@ const ServiceCards = () => {
             'group w-[264px] !rounded-[2px] bg-white text-black !shadow-custom transition-all duration-300 md:flex-1',
             'hover:bg-primary hover:text-white'
           )}>
-          <CardContent className="gap-2r flex flex-col items-start gap-3 !py-10">
-            <i
-              className={`${service.iconClass} text-3xl text-primary transition-colors duration-300 group-hover:text-white`}></i>
+          <CardContent className="gap-2r flex flex-col items-start gap-3 !py-10 transition-all duration-300">
+            <i className={`${service.iconClass} text-3xl text-primary group-hover:text-white`}></i>
             <span className="text- text-xl !font-bold text-text group-hover:text-white">{service.title}</span>
             <span className="text-start text-base font-normal text-secondary group-hover:text-white">
               Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam

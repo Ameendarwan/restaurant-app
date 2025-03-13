@@ -43,7 +43,7 @@ const MenuTabs: React.FC = () => {
           ))}
         </Tabs>
       </div>
-      <div className="relative mt-10 min-h-[400px]">
+      <div className="relative mt-10 min-h-[700px] lg:min-h-[400px]">
         {menuCategories.map((category, index) => (
           <div
             key={index}

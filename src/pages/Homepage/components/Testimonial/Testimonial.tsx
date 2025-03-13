@@ -13,6 +13,9 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className="w-full bg-[#f1f8ff] pt-24 text-center">
       <SectionHeader title="Testimonial" />
@@ -27,7 +30,9 @@ const Testimonial = () => {
             )}>
             <CardContent className="flex flex-col items-center gap-4 !py-5 transition-all duration-500">
               <div className="flex w-full flex-row">
-                <span className="text-start text-secondary group-hover:text-white"> </span>
+                <span className="text-start text-secondary group-hover:text-white">
+                  <i className="fa-solid fa-qoute-left text-white"></i>
+                </span>
               </div>
               <span className="text-start text-secondary group-hover:text-white">
                 Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
@@ -43,8 +48,12 @@ const Testimonial = () => {
           </Card>
         ))}
       </div>
-      <div className="flex w-full flex-row justify-end">
-        <div className="flex items-center justify-center rounded-[2px] bg-primary p-4"></div>
+      <div className="flex w-full flex-row justify-end p-12">
+        <div
+          className="flex cursor-pointer items-center justify-center rounded-[2px] bg-primary p-4"
+          onClick={handleScrollToTop}>
+          <i className="fa-solid fa-arrow-up text-white"></i>
+        </div>
       </div>
     </div>
   );

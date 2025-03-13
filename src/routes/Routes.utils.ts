@@ -1,4 +1,4 @@
 export const paths = {
-  rules: '/rules',
   homepage: '/',
+  contactUs: '/contact-us',
 };

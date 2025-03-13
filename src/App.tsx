@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from './pages/ErrorFallback';
 import { FC } from 'react';
+import Footer from './components/Footer';
 import { Provider } from 'react-redux';
 import Routes from './routes';
 import { ThemeProvider } from '@mui/material';
@@ -26,6 +27,7 @@ const App: FC = () => {
         <ThemeProvider theme={theme}>
           <ErrorBoundary FallbackComponent={ErrorFallback}>
             <Routes />
+            <Footer />
           </ErrorBoundary>
         </ThemeProvider>
       </BrowserRouter>
