@@ -19,7 +19,7 @@ const ContactUs = () => {
         <div className="flex h-full flex-col flex-wrap justify-between">
           <Navbar />
           <div className="flex flex-col items-center justify-center">
-            <span className="text-[64px] font-extrabold text-white">Contact Us</span>
+            <span className="text-[38px] font-extrabold text-white md:text-[64px]">Contact Us</span>
             <div className="flex flex-row items-center justify-center gap-3">
               <span className="uppercase text-white">Home</span>
               <span className="text-white">/</span>
@@ -32,7 +32,7 @@ const ContactUs = () => {
       <div className="flex w-full flex-col gap-6 px-6 pt-24 text-center md:px-48">
         <div className="flex w-full flex-col gap-6 md:gap-1">
           <SectionHeader title="Contact Us" />
-          <span className="text-[40px] font-bold text-text">Contact For Any Query</span>
+          <span className="text-[28px] font-bold text-text md:text-[40px]">Contact For Any Query</span>
         </div>
         <div className="mt-6 flex w-full flex-col justify-between gap-8 lg:flex-row">
           {contacts.map((contact, index) => (
@@ -46,9 +46,11 @@ const ContactUs = () => {
           ))}
         </div>
         <div className="my-10 flex h-full w-full flex-col items-stretch gap-8 md:flex-row">
+          {/* Google Map */}
           <div className="h-auto w-full md:w-1/2">
             <Map />
           </div>
+          {/* Contact Form */}
           <div className="h-auto lg:w-1/2">
             <ContactForm />
           </div>

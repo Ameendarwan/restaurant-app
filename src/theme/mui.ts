@@ -150,6 +150,7 @@ export const theme = createTheme({
           color: '#FFFFFF',
           fontSize: '15px',
           fontWeight: 500,
+          backgroundColor: '#FEA116',
           borderRadius: '2px',
           '&:hover': {
             backgroundColor: '#FEA116',

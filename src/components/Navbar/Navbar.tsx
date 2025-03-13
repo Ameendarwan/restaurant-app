@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="relative min-h-16">
       {/* Desktop Navbar */}
       <div className="hidden w-full flex-row flex-wrap items-center justify-between pt-4 md:flex">
-        <div className="flex flex-row items-center gap-1">
+        <div className="flex flex-row items-center gap-1" onClick={() => navigate(paths.homepage)}>
           <img src={logo} alt="logo" className="h-[310px] w-[310px] md:h-auto md:w-auto" />
           <span className="font-mochiy text-3xl text-primary">FoodFront</span>
         </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <div className="absolute left-0 right-0 flex w-full flex-col">
         <div className="flex w-full items-center justify-between bg-text px-4 py-2 md:hidden">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1" onClick={() => navigate(paths.homepage)}>
             <img src={logo} alt="logo" className="h-12 w-12" />
             <span className="font-mochiy text-2xl text-primary">FoodFront</span>
           </div>

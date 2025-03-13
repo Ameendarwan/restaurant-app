@@ -21,11 +21,11 @@ const Footer: FC<FooterProps> = ({ scrollClassName }) => {
           Reserved.
         </div>
         <div className="flex flex-row items-center">
-          <div className="flex flex-row items-center gap-10">
+          <div className="flex flex-row items-center gap-4">
             <span onClick={() => navigate(paths.homepage)} className={`cursor-pointer text-white hover:text-primary`}>
               Home
             </span>
-            <Divider className="md:hidden" orientation="vertical" />
+            <Divider className="!h-5 md:hidden" orientation="vertical" />
             <span onClick={() => navigate(paths.contactUs)} className={`cursor-pointer text-white hover:text-primary`}>
               Contact
             </span>
