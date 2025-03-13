@@ -1,13 +1,7 @@
 import { Card, CardContent } from '@mui/material';
 
+import { services } from '@app/mock/data';
 import { twMerge } from 'tailwind-merge';
-
-const services = [
-  { iconClass: 'fas fa-user-tie text-5xl', title: 'Master Chefs' },
-  { iconClass: 'fas fa-utensils text-5xl', title: 'Quality Food' },
-  { iconClass: 'fas fa-shopping-cart text-5xl', title: 'Online Order' },
-  { iconClass: 'fas fa-headset text-5xl', title: '24/7 Service' },
-];
 
 const ServiceCards = () => {
   return (

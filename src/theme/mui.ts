@@ -107,6 +107,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+          borderRadius: '2px !important',
           backgroundColor: '#F3F5F8',
           '& .MuiOutlinedInput-notchedOutline': {
             borderColor: 'transparent',
@@ -161,6 +162,7 @@ export const theme = createTheme({
           }),
           ...(ownerState.size === 'large' && {
             padding: `${baseTheme.spacing(1)} ${baseTheme.spacing(4)}`,
+            height: '56px',
           }),
           '&:disabled': {
             backgroundColor: '#2F65F6',

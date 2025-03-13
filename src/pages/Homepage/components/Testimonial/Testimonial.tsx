@@ -1,22 +1,14 @@
 import { Card, CardContent } from '@mui/material';
 
 import SectionHeader from '@app/components/SectionHeader';
-import testimonial1Image from '@app/assets/testimonial/testimonial-1.png';
-import testimonial2Image from '@app/assets/testimonial/testimonial-2.png';
-import testimonial3Image from '@app/assets/testimonial/testimonial-3.png';
+import { testimonials } from '@app/mock/data';
 import { twMerge } from 'tailwind-merge';
-
-const testimonials = [
-  { name: 'Client Name', profession: 'Profession', image: testimonial1Image },
-  { name: 'Client Name', profession: 'Profession', image: testimonial2Image },
-  { name: 'Client Name', profession: 'Profession', image: testimonial3Image },
-];
 
 const Testimonial = () => {
   return (
-    <div className="w-full bg-lightBackground pb-8 text-center md:px-48 md:pb-14 md:pt-28">
+    <div className="w-full px-6 pb-8 text-center md:bg-lightBackground md:px-48 md:pb-14 md:pt-28">
       <SectionHeader title="Testimonial" />
-      <span className={twMerge('!text-[40px] !font-bold text-text')}>Our Clients Say!!!</span>
+      <span className={'text-[28px] !font-bold text-text md:text-[40px]'}>Our Clients Say!!!</span>
       <div className="flex w-full flex-row flex-wrap justify-center gap-6 pt-10">
         {testimonials.map((testimonial, index) => (
           <Card
@@ -28,7 +20,7 @@ const Testimonial = () => {
             <CardContent className="flex flex-col items-center gap-4 !py-5 transition-all duration-500">
               <div className="flex w-full flex-row">
                 <span className="text-start text-secondary group-hover:text-white">
-                  <i className="fa-solid fa-qoute-left text-white"></i>
+                  <i className="fas fa-quote-left text-[32px] text-primary group-hover:text-white"></i>
                 </span>
               </div>
               <span className="text-start text-secondary group-hover:text-white">

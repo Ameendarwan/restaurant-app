@@ -15,7 +15,8 @@ const Navbar = () => {
   };
 
   const scrollToMenu = () => {
-    document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+    if (pathname === paths.homepage) document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
+    else navigate(paths.homepage);
   };
 
   return (

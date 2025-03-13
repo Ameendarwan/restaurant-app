@@ -1,10 +1,10 @@
-import { Button, Divider, MenuItem, TextField } from '@mui/material';
+import { Button, MenuItem, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
 
 import { FormValues } from './Reservation.types';
 import React from 'react';
+import SectionHeader from '@app/components/SectionHeader';
 import reservationImage from '@app/assets/reservation/reservation.png';
-import { twMerge } from 'tailwind-merge';
 import { validationSchema } from './Reservation.utils';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -22,14 +22,11 @@ const Reservation = () => {
   };
 
   return (
-    <section className="flex h-full w-full flex-col items-center md:flex-row" id="reservation">
+    <section className="flex h-full w-full flex-col items-stretch max-sm:pb-24 md:flex-row" id="reservation">
       <img src={reservationImage} alt="Reservation" className="object-cover lg:w-1/2" />
-      <div className="flex h-full w-full items-center justify-start bg-text p-6 text-white md:px-8 lg:w-1/2">
-        <div className="h-full w-full md:max-w-[80%]">
-          <div className="flex flex-row items-center gap-2">
-            <span className="!font-mochiy !text-xl text-primary">Reservation</span>
-            <Divider orientation="horizontal" className={twMerge('h-[2px] w-[45px] !border-none bg-primary')} />
-          </div>
+      <div className="flex h-auto w-full items-center justify-start bg-text p-6 text-white md:px-8 lg:w-1/2">
+        <div className="h-full w-full py-16 md:max-w-[80%]">
+          <SectionHeader title="Reservation" hideLeftDivider className="!justify-start" />
           <span className="text-[40px] font-bold">Book A Table Online</span>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-row flex-wrap gap-4">
@@ -71,7 +68,7 @@ const Reservation = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
-                    label="Date (DD/MM/YYYY)"
+                    label="Date & Time"
                     className="md:flex-1"
                     fullWidth
                     margin="normal"
@@ -116,7 +113,7 @@ const Reservation = () => {
                 />
               )}
             />
-            <Button type="submit" variant="contained" fullWidth className="!mt-2 capitalize">
+            <Button type="submit" variant="contained" size="large" fullWidth className="!mt-2 uppercase">
               Book Now
             </Button>
           </form>

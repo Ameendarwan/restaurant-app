@@ -1,7 +1,7 @@
 export interface TabLabel {
   label: string;
   description: string;
-  icon: JSX.Element;
+  iconClass: string;
 }
 
 export interface MenuItem {

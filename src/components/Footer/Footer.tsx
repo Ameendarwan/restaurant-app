@@ -12,7 +12,7 @@ const Footer: FC<FooterProps> = ({ scrollClassName }) => {
 
   return (
     <div className="flex flex-col">
-      <div className={`px-10 md:pb-20 ${scrollClassName} ${pathname === paths.homepage && 'bg-lightBackground'}`}>
+      <div className={`px-10 md:pb-20 ${scrollClassName} ${pathname === paths.homepage && 'md:bg-lightBackground'}`}>
         <ScrollTop />
       </div>
       <div className="relative flex w-full flex-col items-center justify-between gap-3 bg-[#272F41] px-2 pb-4 pt-6 md:flex-row md:px-48 md:py-3.5">

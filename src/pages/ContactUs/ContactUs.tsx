@@ -1,24 +1,12 @@
 import ContactForm from './components/ContactForm';
 import Map from './components/Map';
 import Navbar from '@app/components/Navbar/Navbar';
+import SVGIcon from '@app/components/SVGIcon';
 import SectionHeader from '@app/components/SectionHeader';
 import bgHeroImage from '@app/assets/homepage/bg-hero.png';
+import { contacts } from '@app/mock/data';
 
 const ContactUs = () => {
-  const contacts = [
-    {
-      title: 'Booking',
-      email: 'booking@example.com',
-    },
-    {
-      title: 'General',
-      email: 'general@example.com',
-    },
-    {
-      title: 'Technical',
-      email: 'tech@example.com',
-    },
-  ];
   return (
     <>
       <div
@@ -41,7 +29,7 @@ const ContactUs = () => {
           <div className="h-1 md:h-[20px]" />
         </div>
       </div>
-      <div className="flex w-full flex-col gap-6 px-8 pt-24 text-center md:px-48">
+      <div className="flex w-full flex-col gap-6 px-6 pt-24 text-center md:px-48">
         <div className="flex w-full flex-col gap-6 md:gap-1">
           <SectionHeader title="Contact Us" />
           <span className="text-[40px] font-bold text-text">Contact For Any Query</span>
@@ -51,17 +39,17 @@ const ContactUs = () => {
             <div key={index} className="flex flex-col gap-2">
               <SectionHeader title={contact.title} hideLeftDivider className="!justify-start" />
               <div className="flex w-full flex-row items-center gap-2">
-                <span>icon</span>
-                <span>{contact.email}</span>
+                <SVGIcon icon="envelop-open" />
+                <span className="text-base text-secondary">{contact.email}</span>
               </div>
             </div>
           ))}
         </div>
-        <div className="my-10 flex min-h-[380px] w-full flex-col gap-6 md:flex-row">
-          <div className="h-[380px] w-full md:w-1/2">
+        <div className="my-10 flex h-full w-full flex-col items-stretch gap-8 md:flex-row">
+          <div className="h-auto w-full md:w-1/2">
             <Map />
           </div>
-          <div className="lg:w-1/2">
+          <div className="h-auto lg:w-1/2">
             <ContactForm />
           </div>
         </div>

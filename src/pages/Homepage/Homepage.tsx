@@ -36,7 +36,8 @@ const Homepage = () => {
                   document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
                 }}
                 variant="contained"
-                className={twMerge('!mt-4 h-14 !w-[200px] self-center !rounded-none md:self-start')}>
+                size="large"
+                className={twMerge('!mt-4 !w-[200px] self-center !rounded-none md:self-start')}>
                 Book A Table
               </Button>
             </div>
