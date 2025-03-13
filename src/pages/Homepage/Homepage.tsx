@@ -1,7 +1,10 @@
 import AboutUs from './components/AboutUs';
 import { Button } from '@mui/material';
+import Footer from '@app/components/Footer';
 import Menu from './components/Menu';
 import ServiceCards from './components/ServiceCards';
+import TeamInfo from './components/TeamInfo/TeamInfo';
+import Testimonial from './components/Testimonial';
 import bgHeroImage from '@app/assets/homepage/bg-hero.png';
 import heroImage from '@app/assets/homepage/hero.png';
 import logo from '@app/assets/logo/logo.png';
@@ -51,6 +54,9 @@ const Homepage = () => {
       <ServiceCards />
       <AboutUs />
       <Menu />
+      <TeamInfo />
+      <Testimonial />
+      <Footer />
     </div>
   );
 };

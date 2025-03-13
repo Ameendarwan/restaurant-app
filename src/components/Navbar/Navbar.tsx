@@ -1,6 +1,5 @@
 import { AppBar, Button, Drawer, IconButton, List, ListItem, ListItemText, Toolbar } from '@mui/material';
 
-import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react';
 import { useState } from 'react';
 
@@ -18,7 +17,7 @@ const Navbar = () => {
             <Button className="rounded-md bg-orange-400 px-4 py-2 text-white">Book A Table</Button>
           </div>
           <IconButton className="text-white md:hidden" onClick={() => setMobileOpen(true)}>
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
         </Toolbar>
       </AppBar>

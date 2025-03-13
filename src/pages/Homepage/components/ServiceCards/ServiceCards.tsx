@@ -17,12 +17,12 @@ const ServiceCards = () => {
           key={index}
           className={twMerge(
             'group w-[264px] !rounded-[2px] bg-white text-black !shadow-custom transition-all duration-300 md:flex-1',
-            'hover:bg-orange-500 hover:text-white'
+            'hover:bg-primary hover:text-white'
           )}>
           <CardContent className="gap-2r flex flex-col items-start gap-3 !py-10">
             <i
-              className={`${service.iconClass} text-3xl text-orange-500 transition-colors duration-300 group-hover:text-white`}></i>
-            <span className="text- text-text text-xl !font-bold group-hover:text-white">{service.title}</span>
+              className={`${service.iconClass} text-3xl text-primary transition-colors duration-300 group-hover:text-white`}></i>
+            <span className="text- text-xl !font-bold text-text group-hover:text-white">{service.title}</span>
             <span className="text-start text-base font-normal text-secondary group-hover:text-white">
               Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam
             </span>

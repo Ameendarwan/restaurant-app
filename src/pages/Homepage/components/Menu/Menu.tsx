@@ -1,7 +1,8 @@
-import { Divider, Tab, Tabs } from '@mui/material';
 import React, { useState } from 'react';
+import { Tab, Tabs } from '@mui/material';
 
 import MenuItem from './components/MenuItem/MenuItem';
+import SectionHeader from '@app/components/SectionHeader';
 import { TabLabel } from './Menu.types';
 import { menuData } from './Menu.utils';
 import { twMerge } from 'tailwind-merge';
@@ -22,12 +23,8 @@ const MenuTabs: React.FC = () => {
 
   return (
     <div className="w-full p-3 text-center">
-      <div className="mb-4 flex flex-row items-center justify-center gap-2">
-        <Divider orientation="horizontal" className={twMerge('h-[2px] w-[45px] !border-none bg-primary')} />
-        <span className="!font-mochiy !text-xl text-primary">Food Menu</span>
-        <Divider orientation="horizontal" className={twMerge('h-[2px] w-[45px] !border-none bg-primary')} />
-      </div>
-      <span className={twMerge('text-text !text-[40px] !font-bold')}>Most Popular Items</span>
+      <SectionHeader title="Food Menu" />
+      <span className={twMerge('!text-[40px] !font-bold text-text')}>Most Popular Items</span>
       <div>
         <Tabs value={value} onChange={handleChange} aria-label="menu categories" centered>
           {tabLabels.map((tab, index) => (
@@ -46,7 +43,7 @@ const MenuTabs: React.FC = () => {
           ))}
         </Tabs>
       </div>
-      <div className="relative mt-10">
+      <div className="relative mt-10 min-h-[400px]">
         {menuCategories.map((category, index) => (
           <div
             key={index}
