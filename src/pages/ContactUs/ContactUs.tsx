@@ -3,7 +3,6 @@ import Map from './components/Map';
 import Navbar from '@app/components/Navbar/Navbar';
 import SectionHeader from '@app/components/SectionHeader';
 import bgHeroImage from '@app/assets/homepage/bg-hero.png';
-import { twMerge } from 'tailwind-merge';
 
 const ContactUs = () => {
   const contacts = [
@@ -21,7 +20,7 @@ const ContactUs = () => {
     },
   ];
   return (
-    <div className="relative">
+    <>
       <div
         className="relative h-[400px] w-full overflow-auto md:px-48"
         style={{
@@ -29,9 +28,9 @@ const ContactUs = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
-        <div className="flex flex-col flex-wrap gap-16 pt-4">
+        <div className="flex h-full flex-col flex-wrap justify-between">
           <Navbar />
-          <div className="flex w-full flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <span className="text-[64px] font-extrabold text-white">Contact Us</span>
             <div className="flex flex-row items-center justify-center gap-3">
               <span className="uppercase text-white">Home</span>
@@ -39,13 +38,15 @@ const ContactUs = () => {
               <span className="uppercase text-primary">Contact</span>
             </div>
           </div>
+          <div className="h-1 md:h-[20px]" />
         </div>
       </div>
-      <div className="w-full pt-24 text-center md:px-48">
-        <SectionHeader title="Contact Us" />
-        <span className={twMerge('!text-[40px] !font-bold text-text')}>Contact For Any Query</span>
-
-        <div className="mt-6 flex w-full flex-col justify-between lg:flex-row">
+      <div className="flex w-full flex-col gap-6 px-8 pt-24 text-center md:px-48">
+        <div className="flex w-full flex-col gap-6 md:gap-1">
+          <SectionHeader title="Contact Us" />
+          <span className="text-[40px] font-bold text-text">Contact For Any Query</span>
+        </div>
+        <div className="mt-6 flex w-full flex-col justify-between gap-8 lg:flex-row">
           {contacts.map((contact, index) => (
             <div key={index} className="flex flex-col gap-2">
               <SectionHeader title={contact.title} hideLeftDivider className="!justify-start" />
@@ -56,8 +57,8 @@ const ContactUs = () => {
             </div>
           ))}
         </div>
-        <div className="my-10 flex h-full w-full flex-col items-center gap-6 md:h-[350px] md:flex-row">
-          <div className="h-full w-full md:w-1/2">
+        <div className="my-10 flex min-h-[380px] w-full flex-col gap-6 md:flex-row">
+          <div className="h-[380px] w-full md:w-1/2">
             <Map />
           </div>
           <div className="lg:w-1/2">
@@ -65,7 +66,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

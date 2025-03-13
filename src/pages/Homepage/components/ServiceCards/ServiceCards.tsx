@@ -11,12 +11,12 @@ const services = [
 
 const ServiceCards = () => {
   return (
-    <div className="flex w-full flex-row flex-wrap justify-center gap-6 bg-white p-10 md:p-24 md:px-48">
+    <section className="flex w-full flex-row flex-wrap justify-center gap-6 bg-white p-10 md:px-48 md:py-28">
       {services.map((service, index) => (
         <Card
           key={index}
           className={twMerge(
-            'group w-[264px] !rounded-[2px] bg-white text-black !shadow-custom transition-all duration-300 md:flex-1',
+            'group w-[264px] !rounded-sm bg-white text-black !shadow-custom transition-all duration-300 md:flex-1',
             'hover:bg-primary hover:text-white'
           )}>
           <CardContent className="gap-2r flex flex-col items-start gap-3 !py-10 transition-all duration-300">
@@ -28,7 +28,7 @@ const ServiceCards = () => {
           </CardContent>
         </Card>
       ))}
-    </div>
+    </section>
   );
 };
 

@@ -16,11 +16,11 @@ const Homepage = () => {
       <div
         className="relative h-full w-full overflow-auto md:px-48 lg:h-screen"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${bgHeroImage})`,
+          backgroundImage: `linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)), url(${bgHeroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
-        <div className="flex flex-col flex-wrap gap-16 pt-4">
+        <div className="flex flex-col flex-wrap gap-16">
           <Navbar />
           <div className="flex w-full flex-col flex-wrap items-center justify-between gap-6 lg:flex-row">
             <div className="flex flex-1 flex-col gap-2 px-10 md:px-0">
@@ -31,7 +31,9 @@ const Homepage = () => {
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
                 ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
               </span>
-              <Button variant="contained" className={twMerge('!mt-4 max-w-max self-center md:self-start')}>
+              <Button
+                variant="contained"
+                className={twMerge('!mt-4 h-14 !w-[200px] self-center !rounded-none md:self-start')}>
                 Book A Table
               </Button>
             </div>

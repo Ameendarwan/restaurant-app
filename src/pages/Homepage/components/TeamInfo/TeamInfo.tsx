@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@mui/material';
 
-import { Icon } from '@iconify/react';
 import SectionHeader from '@app/components/SectionHeader';
 import team1Image from '@app/assets/team/team-1.png';
 import team2Image from '@app/assets/team/team-2.png';
@@ -17,40 +16,39 @@ const team = [
 
 const TeamInfo = () => {
   return (
-    <div className="w-full p-3 text-center">
+    <section className="w-full p-8 text-center md:px-48 md:py-28">
       <SectionHeader title="Team Members" />
       <span className={twMerge('!text-[40px] !font-bold text-text')}>Our Master Chefs</span>
-      <div className="flex w-full flex-row flex-wrap justify-center gap-6 bg-white p-10 md:px-48 md:pb-24">
+      <div className="flex w-full flex-row flex-wrap justify-center gap-6 bg-white pt-10 md:min-h-[400px]">
         {team.map((chef, index) => (
           <Card
             key={index}
             className={twMerge(
-              'group relative w-[264px] overflow-hidden !rounded-[2px] bg-white text-black !shadow-custom transition-all duration-500 lg:flex-1'
+              'group relative h-[320px] w-[264px] overflow-hidden !rounded-sm bg-white text-black !shadow-custom transition-all duration-300 ease-in hover:min-h-[350px] lg:flex-1'
             )}>
-            <CardContent className="flex flex-col items-center gap-4 !py-5 transition-all duration-500">
+            <CardContent className="flex flex-col items-center gap-4 pt-5 transition-all duration-500">
               <img src={chef.image} className="rounded-full" alt="Team Member" />
-              <div className="flex flex-col text-center group-hover:pb-8">
+              <div className="flex flex-col text-center">
                 <span className="text-xl !font-bold text-text">{chef.name}</span>
                 <span className="text-sm text-secondary">{chef.designation}</span>
               </div>
+              {/* Social Icons - Appears on Hover */}
+              <div className="absolute bottom-0 left-0 flex w-full justify-center gap-4 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-100">
+                <span className="cursor-default rounded-full rounded-b-none bg-primary p-2 text-white">
+                  <i className="fa-brands fa-facebook text-lg"></i>
+                </span>
+                <span className="cursor-default rounded-full rounded-b-none bg-primary p-2 text-white">
+                  <i className="fa-brands fa-twitter text-lg"></i>
+                </span>
+                <span className="cursor-default rounded-full rounded-b-none bg-primary p-2 text-white">
+                  <i className="fa-brands fa-instagram text-lg"></i>
+                </span>
+              </div>
             </CardContent>
-
-            {/* Social Icons - Appears on Hover */}
-            <div className="absolute bottom-0 left-0 flex w-full justify-center gap-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-              <span className="cursor-default rounded-full rounded-b-none bg-primary p-2 text-white">
-                <Icon icon="mdi:facebook" className="text-lg" />
-              </span>
-              <span className="cursor-default rounded-full rounded-b-none bg-primary p-2 text-white">
-                <Icon icon="mdi:twitter" className="text-lg" />
-              </span>
-              <span className="cursor-default rounded-full rounded-b-none bg-primary p-2 text-white">
-                <Icon icon="mdi:instagram" className="text-lg" />
-              </span>
-            </div>
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

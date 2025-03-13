@@ -13,19 +13,16 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
   return (
-    <div className="w-full bg-[#f1f8ff] pt-24 text-center">
+    <div className="bg-lightBackground w-full text-center md:px-48 md:pb-14 md:pt-28">
       <SectionHeader title="Testimonial" />
       <span className={twMerge('!text-[40px] !font-bold text-text')}>Our Clients Say!!!</span>
-      <div className="flex w-full flex-row flex-wrap justify-center gap-6 bg-[#f1f8ff] p-10 md:px-48 md:pb-24">
+      <div className="flex w-full flex-row flex-wrap justify-center gap-6 pt-10">
         {testimonials.map((testimonial, index) => (
           <Card
             key={index}
             className={twMerge(
-              'group relative w-[264px] overflow-hidden !rounded-[2px] bg-white text-black !shadow-custom transition-all duration-500 lg:flex-1',
+              'group relative w-full overflow-hidden !rounded-sm border border-border bg-white text-black !shadow-custom transition-all duration-500 md:w-[264px] lg:flex-1',
               'hover:bg-primary hover:text-white'
             )}>
             <CardContent className="flex flex-col items-center gap-4 !py-5 transition-all duration-500">
@@ -47,13 +44,6 @@ const Testimonial = () => {
             </CardContent>
           </Card>
         ))}
-      </div>
-      <div className="flex w-full flex-row justify-end p-12">
-        <div
-          className="flex cursor-pointer items-center justify-center rounded-[2px] bg-primary p-4"
-          onClick={handleScrollToTop}>
-          <i className="fa-solid fa-arrow-up text-white"></i>
-        </div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const SectionHeader: FC<SectionHeaderProps> = ({ title, hideLeftDivider, classNa
       {!hideLeftDivider && (
         <Divider orientation="horizontal" className={twMerge('h-[2px] w-[45px] !border-none bg-primary')} />
       )}
-      <span className="!font-mochiy !text-xl text-primary">{title}</span>
+      <span className="font-pacifico !text-xl text-primary">{title}</span>
       <Divider orientation="horizontal" className={twMerge('h-[2px] w-[45px] !border-none bg-primary')} />
     </div>
   );

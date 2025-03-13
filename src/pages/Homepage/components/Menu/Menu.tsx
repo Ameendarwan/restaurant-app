@@ -8,9 +8,9 @@ import { menuData } from './Menu.utils';
 import { twMerge } from 'tailwind-merge';
 
 const tabLabels: TabLabel[] = [
-  { label: 'Popular Breakfast', description: 'Popular', icon: <i className="fas fa-coffee !h-[40px]"></i> },
-  { label: 'Special Lunch', description: 'Special', icon: <i className="fas fa-hamburger"></i> },
-  { label: 'Lovely Dinner', description: 'Lovely', icon: <i className="fas fa-utensils"></i> },
+  { label: 'Popular Breakfast', description: 'Popular', icon: <i className="fas fa-coffee text-4xl text-primary"></i> },
+  { label: 'Special Lunch', description: 'Special', icon: <i className="fas fa-hamburger text-4xl text-primary"></i> },
+  { label: 'Lovely Dinner', description: 'Lovely', icon: <i className="fas fa-utensils text-4xl text-primary"></i> },
 ];
 
 const MenuTabs: React.FC = () => {
@@ -22,26 +22,30 @@ const MenuTabs: React.FC = () => {
   };
 
   return (
-    <div className="w-full p-3 text-center">
-      <SectionHeader title="Food Menu" />
-      <span className={twMerge('!text-[40px] !font-bold text-text')}>Most Popular Items</span>
-      <div>
-        <Tabs value={value} onChange={handleChange} aria-label="menu categories" centered>
-          {tabLabels.map((tab, index) => (
-            <Tab
-              key={index}
-              label={
-                <div className="flex flex-row">
-                  <span>{tab.icon}</span>
-                  <div className="flex flex-col gap-2">
-                    <span>{tab.description}</span>
-                    <span>{tab.label}</span>
+    <section className="w-full p-8 text-center md:pt-28">
+      <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 md:gap-2">
+          <SectionHeader title="Food Menu" />
+          <span className={twMerge('!text-[40px] !font-bold text-text')}>Most Popular Items</span>
+        </div>
+        <div>
+          <Tabs value={value} onChange={handleChange} aria-label="menu categories" centered>
+            {tabLabels.map((tab, index) => (
+              <Tab
+                key={index}
+                label={
+                  <div className="flex flex-row gap-3">
+                    {tab.icon}
+                    <div className="flex flex-col items-start justify-start">
+                      <span className="text-sm text-secondary">{tab.description}</span>
+                      <span className="font-bold text-text">{tab.label}</span>
+                    </div>
                   </div>
-                </div>
-              }
-            />
-          ))}
-        </Tabs>
+                }
+              />
+            ))}
+          </Tabs>
+        </div>
       </div>
       <div className="relative mt-10 min-h-[700px] lg:min-h-[400px]">
         {menuCategories.map((category, index) => (
@@ -66,7 +70,7 @@ const MenuTabs: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

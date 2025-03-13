@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         mochiy: ['Mochiy Pop One', 'sans-serif'],
+        pacifico: ['Pacifico', 'cursive'],
       },
       boxShadow: {
         custom: '0px 0px 45px rgba(0, 0, 0, 0.08)',
@@ -24,12 +25,13 @@ module.exports = {
         2: '2',
       },
       colors: {
-        border: '#CCCCCC',
+        border: '#DEE2E6',
         separator: '#EDEDED',
         input: 'hsl(var(--input))',
         text: '#0F172B',
         ring: 'hsl(var(--ring))',
         background: '#FFFFFF',
+        lightBackground: '#f1f8ff',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: '#FEA116',
