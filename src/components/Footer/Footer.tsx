@@ -20,7 +20,7 @@ const Footer: FC<FooterProps> = ({ scrollClassName }) => {
           Reserved.
         </div>
         <div className="flex flex-row items-center">
-          <div className="flex flex-row items-center gap-4">
+          <div className="flex flex-row items-center gap-4 md:gap-6">
             <span className="cursor-pointer text-white hover:text-primary">Home</span>
             <Divider className="!h-5 md:hidden" orientation="vertical" />
             <span className="cursor-pointer text-white hover:text-primary">Contact</span>

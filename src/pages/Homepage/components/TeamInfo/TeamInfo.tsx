@@ -15,20 +15,26 @@ const TeamInfo = () => {
             key={index}
             className="group relative h-[320px] w-full overflow-hidden !rounded-sm bg-white text-black !shadow-custom transition-all duration-300 ease-in hover:min-h-[360px] lg:flex-1">
             <CardContent className="flex flex-col items-center gap-4 pt-5 transition-all duration-500">
-              <img src={chef.image} className="rounded-full" alt="Team Member" />
+              <img src={chef.image} className="rounded-full" alt={chef.name} />
               <div className="flex flex-col text-center">
                 <span className="text-xl !font-bold text-text">{chef.name}</span>
                 <span className="text-sm text-secondary">{chef.designation}</span>
               </div>
               {/* Social Icons - Appears on Hover */}
               <div className="absolute bottom-0 left-0 flex w-full justify-center gap-4 opacity-0 transition-opacity duration-300 ease-in group-hover:opacity-100">
-                <span className="cursor-pointer rounded-full rounded-b-none bg-primary p-2 text-white">
+                <span
+                  className="cursor-pointer rounded-full rounded-b-none bg-primary p-2 text-white"
+                  aria-label="Follow on Facebook">
                   <i className="fa-brands fa-facebook text-lg"></i>
                 </span>
-                <span className="cursor-pointer rounded-full rounded-b-none bg-primary p-2 text-white">
+                <span
+                  className="cursor-pointer rounded-full rounded-b-none bg-primary p-2 text-white"
+                  aria-label="Follow on Twitter">
                   <i className="fa-brands fa-twitter text-lg"></i>
                 </span>
-                <span className="cursor-pointer rounded-full rounded-b-none bg-primary p-2 text-white">
+                <span
+                  className="cursor-pointer rounded-full rounded-b-none bg-primary p-2 text-white"
+                  aria-label="Follow on Instagram">
                   <i className="fa-brands fa-instagram text-lg"></i>
                 </span>
               </div>

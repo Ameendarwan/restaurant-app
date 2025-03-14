@@ -9,19 +9,12 @@ import Testimonial from './components/Testimonial';
 const Homepage = () => {
   return (
     <div className="relative">
-      {/* Landing Section */}
       <LandingSection />
-      {/* Services Section */}
       <ServiceCards />
-      {/* About Us Section */}
       <AboutUs />
-      {/* Menu Section */}
       <Menu />
-      {/* Reservation Section */}
       <Reservation />
-      {/* Team Members Section */}
       <TeamInfo />
-      {/* Testimonial Section */}
       <Testimonial />
     </div>
   );

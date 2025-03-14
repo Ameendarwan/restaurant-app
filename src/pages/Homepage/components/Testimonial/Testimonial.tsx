@@ -8,7 +8,7 @@ const Testimonial = () => {
   return (
     <div className="w-full px-6 pb-8 text-center md:bg-lightBackground md:px-48 md:pb-14 md:pt-28">
       <SectionHeader title="Testimonial" />
-      <span className={'text-[28px] !font-bold text-text md:text-[40px]'}>Our Clients Say!!!</span>
+      <span className="text-[28px] !font-bold text-text md:text-[40px]">Our Clients Say!!!</span>
       <div className="flex w-full flex-row flex-wrap justify-center gap-6 pt-10">
         {testimonials.map((testimonial, index) => (
           <Card

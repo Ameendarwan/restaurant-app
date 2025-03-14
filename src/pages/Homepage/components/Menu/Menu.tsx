@@ -14,17 +14,19 @@ const MenuTabs: FC = () => {
   };
 
   return (
-    <section className="w-full px-6 pb-16 text-center md:px-48 md:pt-28" id="menu">
+    <section className="w-full px-6 pb-16 text-center md:px-48 md:pt-28" id="menu" aria-labelledby="menu-heading">
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-6 md:gap-2">
           <SectionHeader title="Food Menu" />
-          <span className="text-[28px] !font-bold text-text md:text-[40px]">Most Popular Items</span>
+          <span id="menu-heading" className="text-[28px] !font-bold text-text md:text-[40px]">
+            Most Popular Items
+          </span>
         </div>
         <div>
           <Tabs
             value={value}
             onChange={handleChange}
-            aria-label="menu categories"
+            aria-label="Menu categories"
             centered
             className="m-auto max-w-max border-b-[1px]">
             {tabLabels.map((tab, index) => (
@@ -33,13 +35,14 @@ const MenuTabs: FC = () => {
                 className={`!pl-0 ${index === tabLabels.length - 1 ? '!pr-0' : 'max-sm:!pr-4 md:!pr-7'} `}
                 label={
                   <div className="mb-2 flex flex-row gap-3">
-                    <i className={`${tab.iconClass}`}></i>
+                    <i className={`${tab.iconClass}`} aria-hidden="true"></i>
                     <div className="flex flex-col items-start justify-start">
                       <span className="text-sm text-secondary max-sm:text-xs">{tab.description}</span>
                       <span className="text-base font-bold text-text max-sm:text-sm">{tab.label}</span>
                     </div>
                   </div>
                 }
+                aria-label={tab.label}
               />
             ))}
           </Tabs>
@@ -49,7 +52,8 @@ const MenuTabs: FC = () => {
         {menuCategories.map((category, index) => (
           <div
             key={index}
-            className={`ease-in-out', absolute inset-0 transform transition-all duration-500 ${value === index ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-5 opacity-0'}`}>
+            className={`ease-in-out', absolute inset-0 transform transition-all duration-500 ${value === index ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-5 opacity-0'}`}
+            aria-hidden={value !== index}>
             <div className="flex w-full flex-col items-center gap-8 md:flex-row">
               <div className="flex flex-1 flex-col gap-4">
                 {menuData[category].map((item, idx) => (

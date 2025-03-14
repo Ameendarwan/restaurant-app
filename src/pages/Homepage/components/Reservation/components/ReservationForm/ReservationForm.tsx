@@ -37,7 +37,6 @@ const ReservationForm = () => {
 
   const onSubmit = (_data: FormValues) => {
     reset();
-
     handleSucess();
   };
 
