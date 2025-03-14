@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Divider } from '@mui/material';
 import { FooterProps } from './Footer.types';
 import ScrollTop from '../ScrollTop';
 import { paths } from '@app/routes/Routes.utils';
+import { useLocation } from 'react-router-dom';
 
 const Footer: FC<FooterProps> = ({ scrollClassName }) => {
-  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   return (
@@ -22,13 +21,9 @@ const Footer: FC<FooterProps> = ({ scrollClassName }) => {
         </div>
         <div className="flex flex-row items-center">
           <div className="flex flex-row items-center gap-4">
-            <span onClick={() => navigate(paths.homepage)} className={`cursor-pointer text-white hover:text-primary`}>
-              Home
-            </span>
+            <span className="cursor-pointer text-white hover:text-primary">Home</span>
             <Divider className="!h-5 md:hidden" orientation="vertical" />
-            <span onClick={() => navigate(paths.contactUs)} className={`cursor-pointer text-white hover:text-primary`}>
-              Contact
-            </span>
+            <span className="cursor-pointer text-white hover:text-primary">Contact</span>
           </div>
         </div>
       </div>

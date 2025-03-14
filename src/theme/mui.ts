@@ -108,21 +108,6 @@ export const theme = createTheme({
         root: {
           textTransform: 'none',
           borderRadius: '2px !important',
-          backgroundColor: '#F3F5F8',
-          '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'transparent',
-          },
-          '&.MuiOutlinedInput-root': {
-            '&:hover fieldset': {
-              borderColor: 'transparent', // Transparent border color on hover
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: 'transparent', // Transparent border color on focus
-            },
-            '&.Mui-disabled fieldset': {
-              borderColor: 'transparent',
-            },
-          },
         },
       },
     },

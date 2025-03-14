@@ -1,4 +1,5 @@
 import React from 'react';
+import SVGIcon from '../SVGIcon';
 
 const ScrollTop = () => {
   const handleScrollToTop = () => {
@@ -9,7 +10,7 @@ const ScrollTop = () => {
       <div
         className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-sm bg-primary"
         onClick={handleScrollToTop}>
-        <i className="fa-solid fa-arrow-up text-white"></i>
+        <SVGIcon icon="arrow-up" />
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ export const icons: Record<IconNames, (props: Partial<IconProps>) => ReactElemen
       />
     </svg>
   ),
-  'arrow-up': ({ width = 12, height = 19, color = 'fill-primary' }) => (
+  'arrow-up': ({ width = 12, height = 19, color = 'fill-white' }) => (
     <svg
       style={{
         height,

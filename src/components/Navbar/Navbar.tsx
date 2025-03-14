@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToReservation = () => {
+    navigate(paths.homepage);
     document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -23,7 +24,7 @@ const Navbar = () => {
     <div className="relative min-h-16">
       {/* Desktop Navbar */}
       <div className="hidden w-full flex-row flex-wrap items-center justify-between pt-4 md:flex">
-        <div className="flex flex-row items-center gap-1" onClick={() => navigate(paths.homepage)}>
+        <div className="flex cursor-pointer flex-row items-center gap-1" onClick={() => navigate(paths.homepage)}>
           <img src={logo} alt="logo" className="h-[310px] w-[310px] md:h-auto md:w-auto" />
           <span className="font-mochiy text-3xl text-primary">FoodFront</span>
         </div>

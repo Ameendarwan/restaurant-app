@@ -14,7 +14,7 @@ const Testimonial = () => {
           <Card
             key={index}
             className={twMerge(
-              'group relative w-full overflow-hidden !rounded-sm border border-border bg-white text-black !shadow-custom transition-all duration-500 md:w-[264px] lg:flex-1',
+              'group relative w-full overflow-hidden !rounded-sm border border-border bg-white text-black !shadow-custom transition-all duration-500 lg:flex-1',
               'hover:bg-primary hover:text-white'
             )}>
             <CardContent className="flex flex-col items-center gap-4 !py-5 transition-all duration-500">

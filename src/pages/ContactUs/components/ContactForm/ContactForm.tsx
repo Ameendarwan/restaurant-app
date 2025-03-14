@@ -1,8 +1,9 @@
 import { Button, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 
 import { FormValues } from './ContactForm.types';
-import React from 'react';
+import SnackbarAlert from '@app/components/SnackbarAlert';
 import { validationSchema } from './ContactForm.utils';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -10,27 +11,39 @@ const ContactForm = () => {
   const {
     control,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(validationSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log('Form Data:', data);
+  const [open, setOpen] = useState(false);
+
+  const handleSucess = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const onSubmit = (_data: FormValues) => {
+    reset();
+    handleSucess();
   };
 
   const inputStyle = {
     '& .MuiOutlinedInput-root': {
       backgroundColor: 'white',
-      padding: 0,
-      margin: 0,
-    },
-    '& .MuiOutlinedInput-input': {
-      backgroundColor: 'white',
-      border: '1px solid #CED4DA',
-      borderRadius: '2px',
     },
   };
+
   return (
     <div className="flex h-full w-full justify-start bg-white text-white">
       <div className="h-full w-full">
@@ -44,6 +57,7 @@ const ContactForm = () => {
                   <TextField
                     {...field}
                     label="Your Name"
+                    variant="outlined"
                     fullWidth
                     className="md:flex-1"
                     error={!!errors.name}
@@ -106,6 +120,12 @@ const ContactForm = () => {
           <Button type="submit" variant="contained" size="large" fullWidth className="!mt-3 !uppercase">
             Send Message
           </Button>
+          {/* Success Alert */}
+          <SnackbarAlert
+            open={open}
+            message="Thank you for reaching out! We have received your query and will get back to you shortly."
+            onClose={handleClose}
+          />
         </form>
       </div>
     </div>
