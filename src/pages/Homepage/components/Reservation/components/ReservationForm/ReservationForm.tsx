@@ -51,7 +51,7 @@ const ReservationForm = () => {
         <SectionHeader title="Reservation" hideLeftDivider className="!justify-start" />
         <span className="text-[40px] font-bold">Book A Table Online</span>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-row flex-wrap gap-4">
+          <div className="flex flex-row flex-wrap md:gap-4">
             <Controller
               name="name"
               control={control}
@@ -87,7 +87,7 @@ const ReservationForm = () => {
               )}
             />
           </div>
-          <div className="flex flex-row flex-wrap gap-4">
+          <div className="flex flex-row flex-wrap md:gap-4">
             <Controller
               name="date"
               control={control}
@@ -145,7 +145,7 @@ const ReservationForm = () => {
               />
             )}
           />
-          <Button type="submit" variant="contained" size="large" fullWidth className="!mt-2 uppercase">
+          <Button type="submit" variant="contained" size="large" fullWidth className="!mt-3 uppercase">
             Book Now
           </Button>
           {/* Success Alert */}
