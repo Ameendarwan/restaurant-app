@@ -1,9 +1,9 @@
 import { Button, TextField } from '@mui/material';
 import { Controller, useForm } from 'react-hook-form';
-import React, { useState } from 'react';
 
 import { FormValues } from './ContactForm.types';
 import SnackbarAlert from '@app/components/SnackbarAlert';
+import { useState } from 'react';
 import { validationSchema } from './ContactForm.utils';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -82,7 +82,6 @@ const ContactForm = () => {
                 )}
               />
             </div>
-
             <Controller
               name="subject"
               control={control}
